@@ -1,13 +1,14 @@
 import { Sidebar } from "./components/Sidebar";
 
-import styles from "./App.module.scss";
 import "./global.scss";
+import { Home } from "./components/Home";
 
 function App() {
   return (
-    <div className={styles.container}>
+    <>
       <Sidebar />
-    </div>
+      <Home />
+    </>
   );
 }
 

@@ -1,0 +1,17 @@
+.container {
+  width: 1.75rem;
+  height: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--blue);
+  border-radius: 8px;
+  color: var(--gray-700);
+  transition: background-color ease 0.2s, border ease 0.2s, color ease 0.2s;
+
+  &:hover {
+    background-color: var(--gray-700);
+    border: 1px solid var(--blue);
+    color: var(--blue);
+  }
+}

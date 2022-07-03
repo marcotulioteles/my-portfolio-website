@@ -6,4 +6,35 @@
   flex-direction: column;
   justify-content: flex-end;
   position: fixed;
+  top: 0;
+  transform: translateX(-200px);
+  transition: transform 0.2s ease;
+  z-index: 10;
+}
+
+.visible {
+  transform: translate(0);
+}
+
+.menuButton {
+  position: fixed;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--gray-700);
+  color: var(--blue);
+  top: 2rem;
+  left: 1rem;
+  cursor: pointer;
+  z-index: 0;
+  transition: background-color ease 0.2s, color ease 0.2s;
+
+  &:hover {
+    background-color: var(--blue);
+    color: var(--gray-700);
+  }
 }

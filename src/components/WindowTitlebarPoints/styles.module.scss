@@ -1,0 +1,32 @@
+.container {
+  width: 3.5rem;
+  height: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+
+  .red {
+    @extend .circle;
+    background-color: #EF5B53;
+  }
+  
+  .yellow {
+    @extend .circle;
+    background-color: #D9A22D;
+  }
+  
+  .green {
+    @extend .circle;
+    background-color: #29C53E;
+  }
+}
+
+.circle {
+  content: '';
+  width: .75rem;
+  height: .75rem;
+  border-radius: 50%;
+}
