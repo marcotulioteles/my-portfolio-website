@@ -1,0 +1,23 @@
+.container {
+  width: 200px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--blue);
+    }
+  }
+}
+
+.active {
+  background-color: var(--gray-500);
+  color: var(--blue);
+}

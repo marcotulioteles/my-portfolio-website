@@ -1,0 +1,9 @@
+.headerContainer {
+  max-width: 200px;
+  min-height: 100vh;
+  background-color: var(--gray-700);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: fixed;
+}

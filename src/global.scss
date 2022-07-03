@@ -1,0 +1,29 @@
+:root {
+  --gray-100: #e1e1e6;
+  --gray-500: #25262A;
+  --gray-700: #16191E;
+  --black: #000000;
+  --blue: #07D4E7;
+
+  --text: 'Catamaran';
+  --sub-title: 'Fira Sans Condensed';
+  --title: 'Archivo Black';
+}
+
+:focus {
+  outline: transparent;
+  box-shadow: 0 0 0 2px var(--blue);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--gray-500);
+  color: var(--gray-100);
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--text), Arial, sans-serif;
+}
