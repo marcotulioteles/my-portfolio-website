@@ -1,4 +1,4 @@
-import { Header } from "./components/Header";
+import { Sidebar } from "./components/Sidebar";
 
 import styles from "./App.module.scss";
 import "./global.scss";
@@ -6,7 +6,7 @@ import "./global.scss";
 function App() {
   return (
     <div className={styles.container}>
-      <Header />
+      <Sidebar />
     </div>
   );
 }

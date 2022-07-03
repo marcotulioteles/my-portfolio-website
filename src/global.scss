@@ -1,5 +1,6 @@
 :root {
   --gray-100: #e1e1e6;
+  --gray-300: #2D2E32;
   --gray-500: #25262A;
   --gray-700: #16191E;
   --black: #000000;
@@ -26,4 +27,13 @@ body {
   color: var(--gray-100);
   -webkit-font-smoothing: antialiased;
   font-family: var(--text), Arial, sans-serif;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+  
+  &:focus {
+    box-shadow: none;
+  }
 }

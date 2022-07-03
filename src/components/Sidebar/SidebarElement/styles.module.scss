@@ -8,8 +8,15 @@
 
   .content {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     transition: color 0.2s ease;
+
+    span {
+      text-align: center;
+      max-width: 144px;
+    }
 
     &:hover {
       color: var(--blue);
@@ -18,6 +25,6 @@
 }
 
 .active {
-  background-color: var(--gray-500);
+  background-color: var(--gray-300);
   color: var(--blue);
 }
