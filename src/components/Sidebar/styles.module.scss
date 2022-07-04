@@ -10,6 +10,15 @@
   transform: translateX(-200px);
   transition: transform 0.2s ease;
   z-index: 10;
+
+  @media (min-width: 1384px) {
+    position: flex;
+    transform: translateX(0);
+
+    & > svg {
+      display: none;
+    }
+  }
 }
 
 .visible {
@@ -36,5 +45,9 @@
   &:hover {
     background-color: var(--blue);
     color: var(--gray-700);
+  }
+
+  @media (min-width: 1384px) {
+    display: none;
   }
 }

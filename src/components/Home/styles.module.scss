@@ -1,3 +1,15 @@
+  .wrapper {
+    min-height: 100vh;
+    display: flex;
+    background-image: url('/src/assets/blur-background.png');
+    background-position: center;
+    background-size: cover;
+    
+    @media (min-width: 1384px) {
+      margin-left: 200px;
+    }
+  }
+
   .container {
   width: 90%;
   margin: auto auto;
@@ -9,6 +21,13 @@
   border-radius: 0.75rem;
   border: 1px solid var(--gray-200);
   position: relative;
+  box-shadow: -25px 25px 35px 15px rgba(0,0,0,0.25);
+
+  @media (min-width: 1384px) {
+    max-width: 1020px;
+    flex-direction: row;
+    padding: 160px 96px;
+  }
 
   .textContainer {
     display: flex;
@@ -16,17 +35,31 @@
     align-items: center;
     margin-top: 1.5rem;
 
+    @media (min-width: 1384px) {
+      align-items: flex-start;
+    }
+
     h1 {
       padding: 0 2rem;
       font-size: 1.8125rem;
       font-family: var(--title);
       text-align: center;
+
+      @media (min-width: 1384px) {
+        text-align: left;
+        padding: 0;
+        font-size: 2.9735rem;
+      }
     }
 
     span {
       margin: 1rem 0;
       font-family: var(--sub-title);
       font-size: 1.125rem;
+
+      @media (min-width: 1384px) {
+        font-size: 1.8125rem;
+      }
     }
 
     a {
@@ -59,10 +92,14 @@
     margin: 1.5rem;
     display: flex;
     justify-content: center;
+    position: relative;
 
     img {
-      width: 95vw;
-      max-width: 265px;
+      width: 190px;
+
+      @media (min-width: 1384px) {
+        width: 265px;
+      }
     }
   }
 
