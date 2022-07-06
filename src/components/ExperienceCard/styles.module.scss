@@ -1,0 +1,91 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5rem;
+
+  .circleGranFather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;  
+    height: 8rem;  
+    background-color: rgba(7, 212, 231, 0.05);
+    border-radius: 50%;
+    background-color: var(--gray-300);
+    position: relative;
+
+    .websiteIcon {
+      position: absolute;
+      bottom: 0.5rem;
+      right: 0.5rem;
+      width: 1.25rem;
+      height: 1.25em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--gray-300);
+      border-radius: 4px;
+      color: var(--blue);
+      transition: all ease-in-out 0.2s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--blue);
+        color: var(--gray-700);
+        transform: scale(1.25)
+      }
+    }
+  }
+
+  .circleFather {
+    @extend .circleGranFather;
+    width: 7rem;
+    height: 7rem;
+    background-color: rgba(7, 212, 231, 0.25);
+  }
+
+  .circle {
+    @extend .circleGranFather;
+    width: 6rem;
+    height: 6rem;
+    background-color: var(--gray-300);
+    border: 0.45rem solid var(--blue);
+    padding: 0.75rem;
+
+    img {
+      width: 4rem;
+    }
+  }
+
+  .techIconsContainer {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .jobTitleAndDate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.25rem;
+    margin-top: 1rem;
+
+    h1 {
+      font-size: 0.875rem;
+      font-family: var(--sub-title);
+      font-weight: normal;
+    }
+
+    & > div {
+      display: flex;
+      align-items: center;
+      column-gap: 0.25rem;
+
+      span {
+        font-size: 0.625rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+  .wrapper {
+    min-height: 100vh;
+    display: flex;
+    background-image: url('/src/assets/blur-background.png');
+    background-position: center;
+    background-size: cover;
+    
+    @media (min-width: 1384px) {
+      margin-left: 200px;
+    }
+  }
+  
+.container {
+  width: 90%;
+  margin: auto auto;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--gray-700);
+  border-radius: 0.75rem;
+  border: 1px solid var(--gray-200);
+  position: relative;
+  box-shadow: -25px 25px 35px 15px rgba(0,0,0,0.25);
+}
