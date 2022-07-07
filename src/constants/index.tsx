@@ -235,3 +235,26 @@ export const EXPERIENCE_CARD_LIST = [
     ],
   },
 ];
+
+export const PORTFOLIO_IMAGES_LIST = [
+  {
+    appName: "ignews",
+    imgUrl: "/src/assets/ignews.png",
+    webUrl: "https://ignews-ten-pink.vercel.app",
+  },
+  {
+    appName: "cryptoGrow",
+    imgUrl: "/src/assets/crypto-grow.png",
+    webUrl: "https://crypto-grow.vercel.app",
+  },
+  {
+    appName: "easyWeather",
+    imgUrl: "/src/assets/easy-weather.png",
+    webUrl: "https://easy-weather-angular.vercel.app",
+  },
+  {
+    appName: "rickAndMorty",
+    imgUrl: "/src/assets/rick-and-morty.png",
+    webUrl: "https://rickandmorty-guideepisodes.vercel.app",
+  },
+];

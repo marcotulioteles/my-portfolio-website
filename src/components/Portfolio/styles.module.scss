@@ -1,0 +1,82 @@
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  background-image: url('/src/assets/blur-background.png');
+  background-position: center;
+  background-size: cover;
+  
+  @media (min-width: 1384px) {
+    margin-left: 200px;
+  }
+}
+
+.container {
+  width: 90%;
+  margin: auto auto;
+  margin-top: 8.5rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.75rem;
+  position: relative;
+  
+  @media (min-width: 620px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1384px) {
+    max-width: 1080px;
+    margin: auto auto;
+    padding-top: 5rem;
+  }
+
+
+  div:nth-child(2) {
+    margin-top: 4rem;
+  }
+
+  .appColumn {
+    display: flex;
+    flex-direction: column;
+  }
+
+  a {
+    border-radius: 12px;
+
+    img {
+      margin: auto auto;
+      border-radius: 12px;
+      transition: all ease-in-out 0.2s;
+
+      &:hover {
+        outline: 2px solid var(--blue);
+        outline-offset: 4px;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    color: var(--blue);
+    font-family: var(--sub-title);
+    font-weight: 300;
+    position: absolute;
+    left: 0;
+    top: -40px;
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--gray-300);
+      padding: 1rem;
+      border-radius: 50%;
+    }
+  }
+}

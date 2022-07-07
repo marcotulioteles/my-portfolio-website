@@ -15,7 +15,7 @@ import { WindowTitlebarPoints } from "../WindowTitlebarPoints";
 import styles from "./styles.module.scss";
 
 export function Home() {
-  const windowWidth = useWindowSize();
+  const { width } = useWindowSize();
 
   return (
     <div className={styles.wrapper}>
@@ -39,23 +39,11 @@ export function Home() {
         <div className={styles.photoContainer}>
           {TECH_ICONS_DECORATION_LIST.map((icon) => (
             <TechIconDecoration
-              size={
-                windowWidth && windowWidth > 1384
-                  ? (icon.size / 190) * 265
-                  : icon.size
-              }
+              size={width && width > 1384 ? (icon.size / 190) * 265 : icon.size}
               icon={icon.icon}
               iconColor={icon.iconColor}
-              left={
-                windowWidth && windowWidth > 1384
-                  ? (icon.left / 190) * 265
-                  : icon.left
-              }
-              top={
-                windowWidth && windowWidth > 1384
-                  ? (icon.top / 190) * 265
-                  : icon.top
-              }
+              left={width && width > 1384 ? (icon.left / 190) * 265 : icon.left}
+              top={width && width > 1384 ? (icon.top / 190) * 265 : icon.top}
               key={`tech-icons-decoration-${icon.name}`}
             />
           ))}

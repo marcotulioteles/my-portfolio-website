@@ -3,13 +3,15 @@ import { Sidebar } from "./components/Sidebar";
 import "./global.scss";
 import { Home } from "./components/Home";
 import { ProfessionalExperience } from "./components/ProfessionalExperience";
+import { Portfolio } from "./components/Portfolio";
 
 function App() {
   return (
     <>
       <Sidebar />
-      <ProfessionalExperience />
       {/* <Home /> */}
+      {/* <ProfessionalExperience /> */}
+      <Portfolio />
     </>
   );
 }
