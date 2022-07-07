@@ -7,6 +7,7 @@ import {
   TECH_ICONS_DECORATION_LIST,
 } from "../../constants";
 import { useWindowSize } from "../../hooks/useWindowSize";
+import { SocialMediaGroup } from "../SocialMediaGroup";
 import { SocialMediaLink } from "../SocialMediaLink";
 import { TechIconDecoration } from "../TechIconDecoration";
 import { WindowTitlebarPoints } from "../WindowTitlebarPoints";
@@ -20,15 +21,7 @@ export function Home() {
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <WindowTitlebarPoints />
-        <div className={styles.socialMediaLinks}>
-          {SOCIAL_MEDIA_LINKS_LIST.map((link, index) => (
-            <SocialMediaLink
-              url={link.url}
-              icon={link.icon}
-              key={`media-link-${link.name}-${index}`}
-            />
-          ))}
-        </div>
+        <SocialMediaGroup />
         <div className={styles.textContainer}>
           <h1>
             Hi, <br />

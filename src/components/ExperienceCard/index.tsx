@@ -5,6 +5,9 @@ import styles from "./styles.module.scss";
 
 interface ExperienceCardProps {
   logoUrl: string;
+  companyUrl: string;
+  jobTitle: string;
+  period: string;
   techIconsList: {
     name: string;
     icon: IconType;
@@ -19,6 +22,9 @@ const generateIcon = (Icon: IconType, color: string, size: number) => (
 
 export function ExperienceCard({
   logoUrl,
+  companyUrl,
+  jobTitle,
+  period,
   techIconsList,
 }: ExperienceCardProps) {
   return (
@@ -29,9 +35,9 @@ export function ExperienceCard({
             <img src={logoUrl} alt="" />
           </div>
         </div>
-        <div className={styles.websiteIcon}>
-          <Desktop size={12} />
-        </div>
+        <a href={companyUrl} target="_blank" className={styles.websiteIcon}>
+          <Desktop size={18} />
+        </a>
       </div>
       <div className={styles.techIconsContainer}>
         {techIconsList.map((icon) =>
@@ -39,10 +45,10 @@ export function ExperienceCard({
         )}
       </div>
       <div className={styles.jobTitleAndDate}>
-        <h1>Software Engineer Front-End</h1>
+        <h1>{jobTitle}</h1>
         <div>
           <Calendar size={16} color="#07D4E7" />
-          <span>August 2021 to April 2022</span>
+          <span>{period}</span>
         </div>
       </div>
     </div>

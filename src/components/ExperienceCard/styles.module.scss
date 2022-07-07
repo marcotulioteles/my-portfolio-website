@@ -18,15 +18,15 @@
 
     .websiteIcon {
       position: absolute;
-      bottom: 0.5rem;
-      right: 0.5rem;
-      width: 1.25rem;
-      height: 1.25em;
+      bottom: -0.125rem;
+      right: -0.125rem;
+      width: 2rem;
+      height: 2em;
       display: flex;
       justify-content: center;
       align-items: center;
       background-color: var(--gray-300);
-      border-radius: 4px;
+      border-radius: 6px;
       color: var(--blue);
       transition: all ease-in-out 0.2s;
       cursor: pointer;
@@ -55,7 +55,7 @@
     padding: 0.75rem;
 
     img {
-      width: 4rem;
+      width: 3.25rem;
     }
   }
 
@@ -63,6 +63,14 @@
     display: flex;
     gap: 0.75rem;
     margin-top: 1rem;
+
+    svg {
+      transition: all ease-in-out 0.2s;
+
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
   }
 
   .jobTitleAndDate {
@@ -71,21 +79,24 @@
     align-items: center;
     row-gap: 0.25rem;
     margin-top: 1rem;
+    font-size: 0.875rem;
+    font-family: var(--sub-title);
+    font-weight: normal;
 
     h1 {
       font-size: 0.875rem;
       font-family: var(--sub-title);
-      font-weight: normal;
+      font-weight: 500;
+    }
+
+    span {
+      font-size: 0.675rem;
     }
 
     & > div {
       display: flex;
       align-items: center;
       column-gap: 0.25rem;
-
-      span {
-        font-size: 0.625rem;
-      }
     }
   }
 }
