@@ -1,12 +1,4 @@
 import { Briefcase } from "phosphor-react";
-import {
-  SiGit,
-  SiGraphql,
-  SiJavascript,
-  SiJest,
-  SiReact,
-  SiSass,
-} from "react-icons/si";
 import { EXPERIENCE_CARD_LIST } from "../../constants";
 import { ExperienceCard } from "../ExperienceCard";
 import { SocialMediaGroup } from "../SocialMediaGroup";
@@ -21,7 +13,7 @@ export function ProfessionalExperience() {
         <WindowTitlebarPoints />
         <SocialMediaGroup />
         <div className={styles.title}>
-          <Briefcase size={54} />
+          <Briefcase size={54} weight="light" />
           <h1>Professional Experience</h1>
         </div>
         <div className={styles.cards}>
