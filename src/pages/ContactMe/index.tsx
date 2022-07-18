@@ -1,36 +1,48 @@
 import { At, EnvelopeSimple, NotePencil, PaperPlaneTilt, Phone, User } from 'phosphor-react';
+import { useForm, SubmitHandler } from 'react-hook-form';
 import { SocialMediaGroup } from '../../components/SocialMediaGroup';
 import { WindowTitlebarPoints } from '../../components/WindowTitlebarPoints';
 import styles from './styles.module.scss';
 
+interface FormProps {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+}
+
 export function ContactMe() {
+  const { register, handleSubmit } = useForm<FormProps>();
+
+  const onSubmit: SubmitHandler<FormProps> = data => console.log(data);
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <WindowTitlebarPoints />
         <SocialMediaGroup />
-        <form action="" >
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className={styles.title}>
             <EnvelopeSimple size={54} weight='light' />
             <h1>Contact me</h1>
           </div>
-          <label htmlFor="userName">
+          <label htmlFor="name">
             <User size={18}/>
-            <input type="text" name='userName' placeholder='Name'/>
+            <input type="text" id='name' placeholder='Name' {...register('name')}/>
           </label>
           <div className={styles.inputGroup}>
             <label htmlFor="email">
               <At size={18}/>
-              <input type="email" name='email' placeholder='E-mail'/>
+              <input type="email" id='email' placeholder='E-mail' {...register('email')}/>
             </label>
             <label htmlFor="phone">
               <Phone size={18}/>
-              <input type="text" name='phone' placeholder='Phone Number'/>
+              <input type="text" id='phone' placeholder='Phone Number' {...register('phone')}/>
             </label>
           </div>
           <label htmlFor="message">
             <NotePencil size={18}/>
-            <textarea name="message" id="message" rows={8} placeholder='Type your message here'></textarea>
+            <textarea id="message" rows={8} placeholder='Type your message here' {...register('message')}></textarea>
           </label>
           <button type='submit'><PaperPlaneTilt size={24} weight='light'/> Send E-mail</button>
         </form>
