@@ -9,13 +9,14 @@ import { SidebarElement } from "./SidebarElement";
 import { SIDEBAR_ELEMENTS_PROPS_LIST } from "../../constants";
 
 import styles from "./styles.module.scss";
+import { useLocation } from "react-router-dom";
 
 interface sidebarElementsProps {
   text: string;
   icon: ReactElement<
     ForwardRefExoticComponent<IconProps & RefAttributes<SVGSVGElement>>
   >;
-  isActive: boolean;
+  url: string;
 }
 
 export function Sidebar() {
@@ -23,21 +24,7 @@ export function Sidebar() {
     sidebarElementsProps[]
   >(SIDEBAR_ELEMENTS_PROPS_LIST);
   const [sidebarIsVisible, setSidebarIsVisible] = useState(false);
-
-  const handleSidebarElementOnClick = (
-    list: sidebarElementsProps[],
-    index: number
-  ) => {
-    const newList = list.map((element) => {
-      return {
-        ...element,
-        isActive: false,
-      };
-    });
-
-    newList[index].isActive = true;
-    setSidebarElements(newList);
-  };
+  const { pathname } = useLocation();
 
   return (
     <>
@@ -52,10 +39,8 @@ export function Sidebar() {
               key={`sidebar-element-${index}`}
               icon={sidebarElement.icon}
               text={sidebarElement.text}
-              isActive={sidebarElement.isActive}
-              onClick={() => {
-                handleSidebarElementOnClick(sidebarElements, index);
-              }}
+              url={sidebarElement.url}
+              urlIsActive={pathname === sidebarElement.url}
             />
           ))}
         </nav>

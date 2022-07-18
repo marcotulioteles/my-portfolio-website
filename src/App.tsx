@@ -5,16 +5,14 @@ import { Home } from "./pages/Home";
 import { ProfessionalExperience } from "./pages/ProfessionalExperience";
 import { Portfolio } from "./pages/Portfolio";
 import { ContactMe } from "./pages/ContactMe";
+import { BrowserRouter } from "react-router-dom";
+import { Router } from "./Router";
 
 function App() {
   return (
-    <>
-      <Sidebar />
-      {/* <Home /> */}
-      {/* <ProfessionalExperience /> */}
-      {/* <Portfolio /> */}
-      <ContactMe />
-    </>
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>
   );
 }
 

@@ -1,32 +1,32 @@
 import { ForwardRefExoticComponent, ReactElement, RefAttributes } from "react";
 import { IconProps } from "phosphor-react";
 import styles from "./styles.module.scss";
+import { NavLink } from "react-router-dom";
 
 interface SidebarElementProps {
-  isActive?: boolean;
   icon: ReactElement<
     ForwardRefExoticComponent<IconProps & RefAttributes<SVGSVGElement>>
   >;
   text: string;
-  onClick: () => void;
+  url: string;
+  urlIsActive: boolean
 }
 
 export function SidebarElement({
-  isActive,
   icon,
   text,
-  onClick,
+  url,
+  urlIsActive
 }: SidebarElementProps) {
   return (
-    <a
-      href="#"
-      className={`${styles["container"]} ${isActive ? styles["active"] : null}`}
-      onClick={onClick}
+    <NavLink
+      to={url}
+      className={urlIsActive ? `${styles.container} ${styles.active}` : `${styles.container}`}
     >
       <div className={styles.content}>
         <div>{icon}</div>
         <span>{text}</span>
       </div>
-    </a>
+    </NavLink>
   );
 }

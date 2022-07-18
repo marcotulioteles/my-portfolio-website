@@ -5,7 +5,8 @@
   background-image: url('/src/assets/blur-background.png');
   background-position: center;
   background-size: cover;
-  
+  background-repeat: repeat;
+
   @media (min-width: 1384px) {
     margin-left: 200px;
   }
@@ -19,7 +20,7 @@
   position: absolute;
   top: -4.5rem;
   left: 0;
-  
+
   h1 {
     font-family: var(--sub-title);
     font-weight: normal;
@@ -33,14 +34,14 @@
     padding: 1rem;
     border-radius: 50%;
   }
-  
+
   @media (max-width: 620px) {
     top: -3.5rem;
-  
+
     div {
       padding: 0.5rem;
     }
-  
+
     h1 {
       font-size: 1.5rem;
     }
@@ -56,7 +57,7 @@
   justify-content: space-between;
   border-radius: 0.75rem;
   position: relative;
-  
+
   @media (min-width: 1384px) {
     max-width: 1080px;
   }
@@ -78,12 +79,12 @@
     .appLinkImage {
       place-self: center stretch;
       border-radius: 12px;
-  
+
       img {
         margin: auto auto;
         border-radius: 12px;
         transition: all ease-in-out 0.2s;
-  
+
         &:hover {
           outline: 2px solid var(--blue);
           outline-offset: 4px;
@@ -104,9 +105,7 @@
     color: var(--blue);
     background-color: var(--gray-700);
     border: 1px solid var(--blue);
-    position: absolute;
-    bottom: -45px;
-    right: 0;
+    margin-bottom: 2rem;
     transition: all ease-in-out 0.2s;
     cursor: pointer;
 

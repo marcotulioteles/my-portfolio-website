@@ -16,8 +16,8 @@ interface ExperienceCardProps {
   }[];
 }
 
-const generateIcon = (Icon: IconType, color: string, size: number) => (
-  <Icon size={size} color={color} />
+const generateIcon = (Icon: IconType, color: string, size: number, key: string) => (
+  <Icon size={size} color={color} key={key}/>
 );
 
 export function ExperienceCard({
@@ -40,8 +40,8 @@ export function ExperienceCard({
         </a>
       </div>
       <div className={styles.techIconsContainer}>
-        {techIconsList.map((icon) =>
-          generateIcon(icon.icon, icon.color, icon.size)
+        {techIconsList.map((icon, index) =>
+          generateIcon(icon.icon, icon.color, icon.size, 'icon-' + index)
         )}
       </div>
       <div className={styles.jobTitleAndDate}>

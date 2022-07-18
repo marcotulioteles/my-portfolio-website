@@ -17,9 +17,9 @@ export function ProfessionalExperience() {
           <h1>Professional Experience</h1>
         </div>
         <div className={styles.cards}>
-          {EXPERIENCE_CARD_LIST.map((card) => (
+          {EXPERIENCE_CARD_LIST.map((card, index) => (
             <ExperienceCard
-              key={card.companyUrl}
+              key={`company}-${index}`}
               logoUrl={card.logoUrl}
               techIconsList={card.techIconsList}
               companyUrl={card.companyUrl}

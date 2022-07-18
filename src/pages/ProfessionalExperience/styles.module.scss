@@ -4,60 +4,61 @@
     background-image: url('/src/assets/blur-background.png');
     background-position: center;
     background-size: cover;
-    
+    background-repeat: repeat;
+
     @media (min-width: 1384px) {
       margin-left: 200px;
     }
   }
-  
-.container {
-  width: 90%;
-  margin: auto auto;
-  margin-top: 5rem;
-  margin-bottom: 2.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  background-color: var(--gray-700);
-  border-radius: 0.75rem;
-  border: 1px solid var(--gray-200);
-  position: relative;
-  box-shadow: -25px 25px 35px 15px rgba(0,0,0,0.25);
 
-  @media (min-width: 1384px) {
-    max-width: 1020px;
+  .container {
+    width: 90%;
     margin: auto auto;
-    padding: 2.5rem 5rem;
-  }
-
-  .title {
+    margin-top: 5rem;
+    margin-bottom: 2.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--blue);
-    padding: 0 2rem 2rem;
-    text-align: center;
-    
-    h1 {
-      font-family: var(--sub-title);
-      font-weight: normal;
-    }
-
-    @media (max-width: 1384px) {
-      padding: 2rem;
-    }
-  }
-
-  .cards {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    background-color: var(--gray-700);
+    border-radius: 0.75rem;
+    border: 1px solid var(--gray-200);
+    position: relative;
+    box-shadow: -25px 25px 35px 15px rgba(0, 0, 0, 0.25);
 
     @media (min-width: 1384px) {
-      justify-content: space-between;
-      flex-direction: row;
+      max-width: 1020px;
+      margin: auto auto;
+      padding: 2.5rem 5rem;
+    }
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: var(--blue);
+      padding: 0 2rem 2rem;
+      text-align: center;
+
+      h1 {
+        font-family: var(--sub-title);
+        font-weight: normal;
+      }
+
+      @media (max-width: 1384px) {
+        padding: 2rem;
+      }
+    }
+
+    .cards {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @media (min-width: 1384px) {
+        justify-content: space-between;
+        flex-direction: row;
+      }
     }
   }
-}

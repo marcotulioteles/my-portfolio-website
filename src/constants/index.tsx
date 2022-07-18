@@ -17,22 +17,22 @@ export const SIDEBAR_ELEMENTS_PROPS_LIST = [
   {
     text: "Home",
     icon: <House size={40} />,
-    isActive: false,
+    url: '/',
   },
   {
     text: "Professional Experience",
     icon: <Briefcase size={40} />,
-    isActive: false,
+    url: '/experience',
   },
   {
     text: "Portfolio",
     icon: <Folders size={40} />,
-    isActive: false,
+    url: '/portfolio'
   },
   {
     text: "Contact me",
     icon: <EnvelopeSimple size={40} />,
-    isActive: false,
+    url: '/contact',
   },
 ];
 

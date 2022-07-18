@@ -4,6 +4,7 @@
   background-image: url('/src/assets/blur-background.png');
   background-position: center;
   background-size: cover;
+  background-repeat: repeat;
 
   @media (min-width: 1384px) {
     margin-left: 200px;
@@ -25,10 +26,11 @@
 }
 
 .container {
-  width: 95%;
+  width: 90%;
+  height: fit-content;
   margin: auto auto;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   background-color: var(--gray-300);
