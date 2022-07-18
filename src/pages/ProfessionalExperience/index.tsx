@@ -1,8 +1,8 @@
 import { Briefcase } from "phosphor-react";
 import { EXPERIENCE_CARD_LIST } from "../../constants";
-import { ExperienceCard } from "../ExperienceCard";
-import { SocialMediaGroup } from "../SocialMediaGroup";
-import { WindowTitlebarPoints } from "../WindowTitlebarPoints";
+import { ExperienceCard } from "../../components/ExperienceCard";
+import { SocialMediaGroup } from "../../components/SocialMediaGroup";
+import { WindowTitlebarPoints } from "../../components/WindowTitlebarPoints";
 
 import styles from "./styles.module.scss";
 

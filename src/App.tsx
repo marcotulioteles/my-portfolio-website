@@ -1,9 +1,10 @@
 import { Sidebar } from "./components/Sidebar";
 
 import "./global.scss";
-import { Home } from "./components/Home";
-import { ProfessionalExperience } from "./components/ProfessionalExperience";
-import { Portfolio } from "./components/Portfolio";
+import { Home } from "./pages/Home";
+import { ProfessionalExperience } from "./pages/ProfessionalExperience";
+import { Portfolio } from "./pages/Portfolio";
+import { ContactMe } from "./pages/ContactMe";
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <Sidebar />
       {/* <Home /> */}
       {/* <ProfessionalExperience /> */}
-      <Portfolio />
+      {/* <Portfolio /> */}
+      <ContactMe />
     </>
   );
 }

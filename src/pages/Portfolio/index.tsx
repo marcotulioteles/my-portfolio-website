@@ -2,7 +2,7 @@ import styles from "./styles.module.scss";
 import { PORTFOLIO_IMAGES_LIST } from "../../constants";
 import { CaretDoubleRight, Folders } from "phosphor-react";
 import { useWindowSize } from "../../hooks/useWindowSize";
-import { SocialMediaGroup } from "../SocialMediaGroup";
+import { SocialMediaGroup } from "../../components/SocialMediaGroup";
 
 const setImgWidth = (width: number | undefined, value: string) =>
   width && width > 620 ? value : "100%";

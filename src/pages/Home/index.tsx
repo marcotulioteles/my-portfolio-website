@@ -7,10 +7,10 @@ import {
   TECH_ICONS_DECORATION_LIST,
 } from "../../constants";
 import { useWindowSize } from "../../hooks/useWindowSize";
-import { SocialMediaGroup } from "../SocialMediaGroup";
-import { SocialMediaLink } from "../SocialMediaLink";
-import { TechIconDecoration } from "../TechIconDecoration";
-import { WindowTitlebarPoints } from "../WindowTitlebarPoints";
+import { SocialMediaGroup } from "../../components/SocialMediaGroup";
+import { SocialMediaLink } from "../../components/SocialMediaLink";
+import { TechIconDecoration } from "../../components/TechIconDecoration";
+import { WindowTitlebarPoints } from "../../components/WindowTitlebarPoints";
 
 import styles from "./styles.module.scss";
 
