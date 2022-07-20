@@ -82,6 +82,11 @@
       }
     }
 
+    .phoneInputGroup {
+      display: flex;
+      gap: 0.25rem;
+    }
+
     label {
       width: 100%;
       position: relative;

@@ -1,5 +1,6 @@
 import { At, EnvelopeSimple, NotePencil, PaperPlaneTilt, Phone, User } from 'phosphor-react';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { INTLDiallingCodesSelect } from '../../components/INTLDiallingCodesSelect';
 import { SocialMediaGroup } from '../../components/SocialMediaGroup';
 import { WindowTitlebarPoints } from '../../components/WindowTitlebarPoints';
 import styles from './styles.module.scss';
@@ -35,10 +36,13 @@ export function ContactMe() {
               <At size={18}/>
               <input type="email" id='email' placeholder='E-mail' {...register('email')}/>
             </label>
-            <label htmlFor="phone">
-              <Phone size={18}/>
-              <input type="text" id='phone' placeholder='Phone Number' {...register('phone')}/>
-            </label>
+            <div className={styles['phoneInputGroup']}>
+              <INTLDiallingCodesSelect />
+              <label htmlFor="phone" style={{ minWidth: '168px' }}>
+                <Phone size={18}/>
+                <input type="text" id='phone' placeholder='Phone Number' {...register('phone')}/>
+              </label>
+            </div>
           </div>
           <label htmlFor="message">
             <NotePencil size={18}/>

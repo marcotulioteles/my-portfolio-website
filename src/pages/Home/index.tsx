@@ -13,6 +13,7 @@ import { TechIconDecoration } from "../../components/TechIconDecoration";
 import { WindowTitlebarPoints } from "../../components/WindowTitlebarPoints";
 
 import styles from "./styles.module.scss";
+import { INTLDiallingCodesSelect } from "../../components/INTLDiallingCodesSelect";
 
 export function Home() {
   const { width } = useWindowSize();
