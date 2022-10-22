@@ -1,8 +1,34 @@
 import styles from "./styles.module.scss";
-import { PORTFOLIO_IMAGES_LIST } from "../../constants";
 import { CaretDoubleRight, Folders } from "phosphor-react";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import { SocialMediaGroup } from "../../components/SocialMediaGroup";
+import ignewsImg from '../../assets/ignews.png';
+import cryptoGrowImg from '../../assets/crypto-grow.png';
+import easyWeatherImg from '../../assets/easy-weather.png';
+import rickAndMortyImg from '../../assets/rick-and-morty.png';
+
+export const PORTFOLIO_IMAGES_LIST = [
+  {
+    appName: "ignews",
+    imgUrl: ignewsImg,
+    webUrl: "https://ignews-ten-pink.vercel.app",
+  },
+  {
+    appName: "cryptoGrow",
+    imgUrl: cryptoGrowImg,
+    webUrl: "https://crypto-grow.vercel.app",
+  },
+  {
+    appName: "easyWeather",
+    imgUrl: easyWeatherImg,
+    webUrl: "https://easy-weather-angular.vercel.app",
+  },
+  {
+    appName: "rickAndMorty",
+    imgUrl: rickAndMortyImg,
+    webUrl: "https://rickandmorty-guideepisodes.vercel.app",
+  },
+];
 
 const setImgWidth = (width: number | undefined, value: string) =>
   width && width > 620 ? value : "100%";
