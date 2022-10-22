@@ -30,8 +30,8 @@ export function Home() {
           </h1>
           <span>Software Engineer Front-End</span>
           <a
-            href="/src/assets/CVMarcoTulio-en.docx"
-            download="CVMarcoTulio.docx"
+            href="/src/assets/CVMarcoTulio-en.pdf"
+            download="CVMarcoTulio.pdf"
           >
             <DownloadSimple size={24} />
             Download CV

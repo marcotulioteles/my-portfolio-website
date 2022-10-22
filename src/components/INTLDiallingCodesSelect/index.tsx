@@ -9,10 +9,12 @@ export function INTLDiallingCodesSelect() {
   const [searchCountry, setSearchCountry] = useState('');
   const [codeList, setCodeList] = useState(INTERNATIONAL_DIALLING_CODES);
   const debouncedSearchTerm = useDebounce<string>(searchCountry, 400);
+  const [openList, setOpenList] = useState(false);
 
   const handleDialCodeValue = (flag: string, dialCode: string) => {
     setFlagAndCode(flag + ' ' + dialCode);
     setValue(dialCode);
+    setOpenList(false);
   }
 
   const handleSearchCountry = (event: ChangeEvent<HTMLInputElement>) => {
@@ -32,17 +34,17 @@ export function INTLDiallingCodesSelect() {
 
   return (
     <>
-      <label htmlFor="dial-code" className={styles.container}>
+      <label htmlFor="dial-code" className={styles.container} onClick={() => setOpenList(true)}>
         <div className={styles['container__select']}>{flagAndCode}</div>
-        <input type="text" value={value} id="dial-code" style={{ display: 'none' }} readOnly/>
-        <div className={styles['container__list-container']}>
-          <input type="text" placeholder='Search a country' className={styles['input-search-country']} onChange={handleSearchCountry}/>
+        <input type="text" value={value} id="dial-code" style={{ display: 'none' }} readOnly />
+        <div className={styles['container__list-container']} style={{ display: openList ? 'initial' : 'none' }}>
+          <input type="text" placeholder='Search a country' className={styles['input-search-country']} onChange={handleSearchCountry} />
           <ul>
-            { codeList.map(country => (
+            {codeList.map(country => (
               <li key={country.code} onClick={() => handleDialCodeValue(country.flag, country.dial_code)}>
                 <span>{country.flag + ' ' + country.name + ' ' + country.dial_code}</span>
               </li>
-            )) }
+            ))}
           </ul>
         </div>
       </label>

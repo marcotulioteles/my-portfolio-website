@@ -1,6 +1,7 @@
 .container {
   max-width: max-content;
   position: relative;
+  cursor: pointer;
 
   &__select {
     display: flex;
