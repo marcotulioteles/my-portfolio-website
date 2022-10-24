@@ -31,7 +31,7 @@ export function Home() {
           <span>Software Engineer Front-End</span>
           <a
             href="/src/assets/CVMarcoTulio-en.pdf"
-            download="CVMarcoTulio.pdf"
+            download
           >
             <DownloadSimple size={24} />
             Download CV
