@@ -32,7 +32,7 @@ export function ContactMe() {
               <strong><a href="https://www.linkedin.com/in/marcotulioteles/" target='__blank'>LinkedIn</a></strong>{' '}
               or{' '}
               <strong>
-                <a href="https://api.whatsapp.com/send?phone=5534991388938&text=Thank%20you%20for%20contacting%20me!%20I'll%20respond%20your%20message%20very%20soon!" target='__blank'>
+                <a href="https://api.whatsapp.com/send?phone=5534991388938&text=Hello%20Marco%20Túlio!%20I%20would%20like%20to%20talk%20to%20you%20about%20a%20job%20opportunity%20as%20frontend%20developer." target='__blank'>
                   Whatsapp
                 </a>
               </strong>.
